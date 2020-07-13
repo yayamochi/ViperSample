@@ -1,0 +1,6 @@
+ib:
+  inputs:
+    - ViperManualSample
+  outputs:
+    - templateName: scenes-swift5
+      output: ViperManualSample/generated/Scenes.swift
