@@ -19,11 +19,6 @@ class RepositoryDetailViewController: UIViewController {
     @IBOutlet private weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        webView = WKWebView(frame: self.view.frame,
-                            configuration: WKWebViewConfiguration())
-        webView.uiDelegate = self
-        webView.navigationDelegate = self
         presenter.viewDidLoad()
     }
 
@@ -32,9 +27,7 @@ extension RepositoryDetailViewController : RepositoryDetailView {
     func load(request urlRequest: URLRequest) {
         webView.load(urlRequest)
     }
-    
 }
-
 
 extension RepositoryDetailViewController: WKUIDelegate {
 }

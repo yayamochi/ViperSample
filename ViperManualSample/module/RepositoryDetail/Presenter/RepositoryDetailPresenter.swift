@@ -33,7 +33,6 @@ final class RepositoryDetailPresenter {
 
 extension RepositoryDetailPresenter: RepositoryDetailPresentation {
     func viewDidLoad() {
-        print(repository.repo.url)
         view?.load(request: URLRequest(url: repository.repo.url))
     }
     
