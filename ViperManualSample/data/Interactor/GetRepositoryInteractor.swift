@@ -13,19 +13,17 @@ protocol GetRepositoryUseCase: AnyObject {
 }
 
 final class GetRepositoryInteractor {
-    private var repositories: [Repository]?
+    private var repositories: [Repository] = []
 }
-
 
 extension GetRepositoryInteractor: GetRepositoryUseCase {
     
-
     func fetchTrendingRepositories(completion: @escaping (AFDataResponse<Any>) -> Void)  {
         let baseUrl = "https://ghapi.huchen.dev/developers"
         let parameters: [String: Any] = ["language": "javascript", "since": "weekly"]
         let headers: HTTPHeaders = ["Content-Type": "application/json"]
         
-        AF.request(baseUrl, method: .get, parameters: parameters, encoding:  URLEncoding(destination: .queryString), headers: headers).responseJSON { response in
+        AF.request(baseUrl, method: .get, parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: headers).responseJSON { response in
             completion(response)
         }
 

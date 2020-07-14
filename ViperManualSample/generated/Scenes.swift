@@ -17,6 +17,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: LaunchScreen.self)
   }
+  internal enum RepositoryDetail: StoryboardType {
+    internal static let storyboardName = "RepositoryDetail"
+
+    internal static let initialScene = InitialSceneType<ViperManualSample.RepositoryDetailViewController>(storyboard: RepositoryDetail.self)
+  }
   internal enum RepositoryList: StoryboardType {
     internal static let storyboardName = "RepositoryList"
 

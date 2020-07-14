@@ -9,7 +9,7 @@ import UIKit
 
 
 protocol RepositoryListWireframe: AnyObject {
-    func sample()
+    func showRepositoryDetail(_ repository: Repository)
 }
 
 
@@ -22,7 +22,6 @@ final class RepositoryListRouter {
     }
 
         
-    // DI
     static func assembleModules() -> UIViewController {
         
         let view = StoryboardScene.RepositoryList.initialScene.instantiate()
@@ -33,20 +32,17 @@ final class RepositoryListRouter {
                                                     router: router,
                                                     getRepositoryInteractor: getRepositoryInteractor)
 
-        view.presenter = presenter    // ViewにPresenterを設定
-        
-    
+        view.presenter = presenter 
         
         return view
     }
-    
     
 }
 
 
 extension RepositoryListRouter: RepositoryListWireframe {
-    func sample() {
-        print("sample")
-
+    func showRepositoryDetail(_ repository: Repository) {
+        let detailView = RepositoryDetailRouter.assembleModulers(repository: repository)
+        viewController.navigationController?.pushViewController(detailView, animated: true)
     }
 }

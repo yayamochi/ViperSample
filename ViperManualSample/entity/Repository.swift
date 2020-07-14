@@ -11,14 +11,13 @@ import Foundation
 struct Repository: Decodable {
     let username: String
     let name: String
-    let url: String
+    let url: URL
     let avatar: String
     let repo: RepositoryDetail
 
     struct RepositoryDetail: Decodable {
         let name: String
         let description: String
-        let url: String
+        let url: URL
     }
 }
-

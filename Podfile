@@ -8,6 +8,7 @@ target 'ViperManualSample' do
   # Pods for ViperSample
   pod 'Alamofire', '~> 5.2'
   pod 'SwiftGen'
+  pod 'SwiftLint'
   target 'ViperManualSampleTests' do
     inherit! :search_paths
     # Pods for testing

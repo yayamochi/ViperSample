@@ -63,7 +63,7 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("select")
+        presenter.didSelectRow(at: indexPath)
     }
 }
 

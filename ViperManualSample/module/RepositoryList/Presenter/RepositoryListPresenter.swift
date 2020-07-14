@@ -12,6 +12,7 @@ import Alamofire
 protocol RepositoryListViewPresentation: AnyObject {
     func viewDidLoad()
     func fetchTrendingRepositories()
+    func didSelectRow(at indexPath: IndexPath)
 }
 
 
@@ -41,7 +42,6 @@ final class RepositoryListPresenter {
 
 extension RepositoryListPresenter: RepositoryListViewPresentation {
     func viewDidLoad() {
-        print("view did load")
     }
 
     
@@ -54,6 +54,7 @@ extension RepositoryListPresenter: RepositoryListViewPresentation {
                 }
 
                 do {
+                    
                     self?.repositories = try JSONDecoder().decode([Repository].self, from: data)
                 } catch let error {
                     print(error)
@@ -64,5 +65,11 @@ extension RepositoryListPresenter: RepositoryListViewPresentation {
             }
 
         }
+    }
+    
+    func didSelectRow(at indexPath: IndexPath) {
+        guard indexPath.row < repositories.count else {return}
+        let repository = repositories[indexPath.row]
+        router.showRepositoryDetail(repository)
     }
 }

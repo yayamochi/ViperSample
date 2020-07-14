@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0A83F2A2314D597053CFD469 /* Pods_ViperManualSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA497644564CE0500A7A38C4 /* Pods_ViperManualSampleTests.framework */; };
+		5C4CFDE724BD25B300D2173F /* RepositoryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4CFDE624BD25B300D2173F /* RepositoryDetail.storyboard */; };
+		5C4CFDE924BD25EE00D2173F /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4CFDE824BD25EE00D2173F /* RepositoryDetailViewController.swift */; };
+		5C4CFDEC24BD26C600D2173F /* RepositoryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4CFDEB24BD26C600D2173F /* RepositoryDetailRouter.swift */; };
+		5C4CFDF024BD284400D2173F /* RepositoryDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4CFDEF24BD284400D2173F /* RepositoryDetailPresenter.swift */; };
 		5CC3A37424B885C100A3AA00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3A37324B885C100A3AA00 /* AppDelegate.swift */; };
-		5CC3A37824B885C100A3AA00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3A37724B885C100A3AA00 /* ViewController.swift */; };
 		5CC3A37D24B885C300A3AA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3A37C24B885C300A3AA00 /* Assets.xcassets */; };
 		5CC3A38024B885C300A3AA00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3A37E24B885C300A3AA00 /* LaunchScreen.storyboard */; };
 		5CC3A38B24B885C300A3AA00 /* ViperManualSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3A38A24B885C300A3AA00 /* ViperManualSampleTests.swift */; };
@@ -52,9 +55,12 @@
 		3229B719F5F494637BDF8329 /* Pods-ViperManualSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperManualSample.debug.xcconfig"; path = "Target Support Files/Pods-ViperManualSample/Pods-ViperManualSample.debug.xcconfig"; sourceTree = "<group>"; };
 		34E76678F1DAFCAA2125EB48 /* Pods-ViperManualSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperManualSample.release.xcconfig"; path = "Target Support Files/Pods-ViperManualSample/Pods-ViperManualSample.release.xcconfig"; sourceTree = "<group>"; };
 		40AD1E1B2A98C4B3C3D97648 /* Pods-ViperManualSample-ViperManualSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperManualSample-ViperManualSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-ViperManualSample-ViperManualSampleUITests/Pods-ViperManualSample-ViperManualSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C4CFDE624BD25B300D2173F /* RepositoryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepositoryDetail.storyboard; sourceTree = "<group>"; };
+		5C4CFDE824BD25EE00D2173F /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
+		5C4CFDEB24BD26C600D2173F /* RepositoryDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailRouter.swift; sourceTree = "<group>"; };
+		5C4CFDEF24BD284400D2173F /* RepositoryDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailPresenter.swift; sourceTree = "<group>"; };
 		5CC3A37024B885C100A3AA00 /* ViperManualSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperManualSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC3A37324B885C100A3AA00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5CC3A37724B885C100A3AA00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5CC3A37C24B885C300A3AA00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CC3A37F24B885C300A3AA00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CC3A38124B885C300A3AA00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +128,50 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5C4CFDE424BD255200D2173F /* RepositoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5C4CFDEE24BD281E00D2173F /* Presenter */,
+				5C4CFDEA24BD26BA00D2173F /* Router */,
+				5C4CFDE524BD256400D2173F /* View */,
+			);
+			path = RepositoryDetail;
+			sourceTree = "<group>";
+		};
+		5C4CFDE524BD256400D2173F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C4CFDE624BD25B300D2173F /* RepositoryDetail.storyboard */,
+				5C4CFDE824BD25EE00D2173F /* RepositoryDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5C4CFDEA24BD26BA00D2173F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5C4CFDEB24BD26C600D2173F /* RepositoryDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5C4CFDEE24BD281E00D2173F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5C4CFDEF24BD284400D2173F /* RepositoryDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5C4CFDF124BD2BF700D2173F /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				5CC3A3C524BB572C00A3AA00 /* RepositoryTableViewCell.swift */,
+				5CC3A3C624BB572C00A3AA00 /* RepositoryTableViewCell.xib */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
 		5CC3A36724B885C100A3AA00 = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +202,6 @@
 				5CC3A3B524BAFC0D00A3AA00 /* data */,
 				5CC3A3A424B8BC7400A3AA00 /* module */,
 				5CC3A37324B885C100A3AA00 /* AppDelegate.swift */,
-				5CC3A37724B885C100A3AA00 /* ViewController.swift */,
 				5CC3A3BE24BB3D2900A3AA00 /* SceneDelegate.swift */,
 				5CC3A37C24B885C300A3AA00 /* Assets.xcassets */,
 				5CC3A37E24B885C300A3AA00 /* LaunchScreen.storyboard */,
@@ -182,6 +231,7 @@
 		5CC3A3A424B8BC7400A3AA00 /* module */ = {
 			isa = PBXGroup;
 			children = (
+				5C4CFDE424BD255200D2173F /* RepositoryDetail */,
 				5CC3A3A824B8C82000A3AA00 /* RepositoryList */,
 				5CC3A3A524B8BC8F00A3AA00 /* Root */,
 			);
@@ -209,10 +259,9 @@
 		5CC3A3A924B8C8AE00A3AA00 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5C4CFDF124BD2BF700D2173F /* SubView */,
 				5CC3A3AA24B8C8C700A3AA00 /* RepositoryList.storyboard */,
 				5CC3A3AC24B8C8E800A3AA00 /* RepositoryListViewController.swift */,
-				5CC3A3C524BB572C00A3AA00 /* RepositoryTableViewCell.swift */,
-				5CC3A3C624BB572C00A3AA00 /* RepositoryTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,6 +437,7 @@
 				5CC3A3AB24B8C8C700A3AA00 /* RepositoryList.storyboard in Resources */,
 				5CC3A38024B885C300A3AA00 /* LaunchScreen.storyboard in Resources */,
 				5CC3A37D24B885C300A3AA00 /* Assets.xcassets in Resources */,
+				5C4CFDE724BD25B300D2173F /* RepositoryDetail.storyboard in Resources */,
 				5CC3A3C824BB572C00A3AA00 /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,7 +540,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}\"/SwiftGen/bin/swiftgen\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}\"/SwiftGen/bin/swiftgen\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n\n${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		B265EFDDCAEA8E29D9F89162 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -534,11 +584,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC3A3A724B8BC9F00A3AA00 /* RootRouter.swift in Sources */,
+				5C4CFDE924BD25EE00D2173F /* RepositoryDetailViewController.swift in Sources */,
+				5C4CFDEC24BD26C600D2173F /* RepositoryDetailRouter.swift in Sources */,
 				5CC3A3B324B9B7F800A3AA00 /* RepositoryListPresenter.swift in Sources */,
 				5CC3A3BF24BB3D2900A3AA00 /* SceneDelegate.swift in Sources */,
+				5C4CFDF024BD284400D2173F /* RepositoryDetailPresenter.swift in Sources */,
 				5CC3A3C724BB572C00A3AA00 /* RepositoryTableViewCell.swift in Sources */,
 				5CC3A3BD24BB383000A3AA00 /* Scenes.swift in Sources */,
-				5CC3A37824B885C100A3AA00 /* ViewController.swift in Sources */,
 				5CC3A37424B885C100A3AA00 /* AppDelegate.swift in Sources */,
 				5CC3A3C424BB471D00A3AA00 /* GetRepositoryInteractor.swift in Sources */,
 				5CC3A3B024B9AFF500A3AA00 /* RepositoryListRouter.swift in Sources */,
